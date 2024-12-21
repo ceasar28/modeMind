@@ -46,4 +46,4 @@ Text content
 
 ## Defined in
 
-[packages/core/src/types.ts:540](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/types.ts#L540)
+[packages/core/src/types.ts:540](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L540)

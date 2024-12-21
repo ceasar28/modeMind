@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[packages/core/src/goals.ts:45](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/goals.ts#L45)
+[packages/core/src/goals.ts:45](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/goals.ts#L45)

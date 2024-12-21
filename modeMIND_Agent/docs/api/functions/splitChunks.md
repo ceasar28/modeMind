@@ -28,4 +28,4 @@ Promise resolving to array of text chunks with bleed sections
 
 ## Defined in
 
-[packages/core/src/generation.ts:556](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/generation.ts#L556)
+[packages/core/src/generation.ts:556](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/generation.ts#L556)

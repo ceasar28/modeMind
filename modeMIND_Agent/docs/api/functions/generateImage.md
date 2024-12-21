@@ -48,4 +48,4 @@
 
 ## Defined in
 
-[packages/core/src/generation.ts:799](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/generation.ts#L799)
+[packages/core/src/generation.ts:799](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/generation.ts#L799)

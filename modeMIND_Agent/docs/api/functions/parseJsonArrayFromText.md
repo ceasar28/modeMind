@@ -23,4 +23,4 @@ An array parsed from the JSON string if successful; otherwise, null.
 
 ## Defined in
 
-[packages/core/src/parsing.ts:60](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/parsing.ts#L60)
+[packages/core/src/parsing.ts:60](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/parsing.ts#L60)

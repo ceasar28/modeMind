@@ -32,4 +32,4 @@
 
 ## Defined in
 
-[packages/core/src/types.ts:1128](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/types.ts#L1128)
+[packages/core/src/types.ts:1128](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L1128)

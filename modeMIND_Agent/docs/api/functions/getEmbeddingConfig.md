@@ -24,4 +24,4 @@ Add the embedding configuration
 
 ## Defined in
 
-[packages/core/src/embedding.ts:18](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/embedding.ts#L18)
+[packages/core/src/embedding.ts:18](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/embedding.ts#L18)

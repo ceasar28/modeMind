@@ -8,4 +8,4 @@ Type inference
 
 ## Defined in
 
-[packages/core/src/environment.ts:23](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/environment.ts#L23)
+[packages/core/src/environment.ts:23](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/environment.ts#L23)

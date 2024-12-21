@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[packages/core/src/posts.ts:4](https://github.com/dabit3/ai-agent-cognitivedriftt/blob/main/packages/core/src/posts.ts#L4)
+[packages/core/src/posts.ts:4](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/posts.ts#L4)
