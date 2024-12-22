@@ -33,7 +33,7 @@ import {
 } from "@ai16z/plugin-coinbase";
 import { confluxPlugin } from "@ai16z/plugin-conflux";
 import { imageGenerationPlugin } from "@ai16z/plugin-image-generation";
-import { evmPlugin } from "@ai16z/plugin-evm";
+// import { evmPlugin } from "@ai16z/plugin-evm";
 import { createNodePlugin } from "@ai16z/plugin-node";
 import { solanaPlugin } from "@ai16z/plugin-solana";
 import { teePlugin } from "@ai16z/plugin-tee";
@@ -44,7 +44,8 @@ import readline from "readline";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
 // import { mainCharacter } from "../mainCharacter.ts";
-import { mainCharacter } from "../skynetCharacter.ts";
+// import { mainCharacter } from "../skynetCharacter.ts";
+import { mainCharacter } from "../modeMINDCharacter.ts";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory

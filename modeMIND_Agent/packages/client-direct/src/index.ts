@@ -376,6 +376,185 @@ export class DirectClient {
                 }
             }
         );
+        this.app.post(
+            "/:agentId/analyze",
+            async (req: express.Request, res: express.Response) => {
+                try {
+                    // Prepare URLs for fetch calls
+                    const baseUrl = "https://explorer.mode.network/api/v2";
+                    const contract = req.body.contract.trim();
+
+                    const urls = [
+                        `${baseUrl}/addresses/${contract}`,
+                        `${baseUrl}/tokens/${contract}/holders`,
+                        `${baseUrl}/tokens/${contract}/counters`,
+                    ];
+
+                    // Fetch all data concurrently
+                    const [tokenInfo, tokenHolders, tokenHoldersCount] =
+                        await Promise.all(
+                            urls.map((url) =>
+                                fetch(url, { method: "GET" }).then((response) =>
+                                    response.json()
+                                )
+                            )
+                        );
+
+                    // Respond with the collected data
+                    const tokenAnalyticData = {
+                        tokenName: tokenInfo.name,
+                        tokenSymbol: tokenInfo["token"].symbol,
+                        tokenBalance: tokenInfo.coin_balance,
+                        tokenCreationHash: tokenInfo.creation_tx_hash,
+                        tokenExchangeRate: tokenInfo.exchange_rate,
+                        tokenIsVerified: tokenInfo.is_verified,
+                        tokenCreator: tokenInfo.creator_address_hash,
+                        totalSupply: tokenInfo["token"].total_supply,
+                        totalHolders: tokenInfo["token"].holders,
+                        decimals: tokenInfo["token"].decimals,
+                        topTokenHolderValues: tokenHolders.items.map(
+                            (item) => item.value
+                        ),
+                        totalTransactions: tokenHoldersCount.transfers_count,
+                        formattedTotalSupply: tokenInfo["token"].total_supply,
+                    };
+                    // res.json({ tokenAnalyticData });
+
+                    const agentId = req.params.agentId;
+                    const roomId = stringToUuid(
+                        req.body.roomId ?? "default-room-" + agentId
+                    );
+                    const userId = stringToUuid(req.body.userId ?? "user");
+
+                    let runtime = this.agents.get(agentId);
+
+                    // if runtime is null, look for runtime with the same name
+                    if (!runtime) {
+                        runtime = Array.from(this.agents.values()).find(
+                            (a) =>
+                                a.character.name.toLowerCase() ===
+                                agentId.toLowerCase()
+                        );
+                    }
+
+                    if (!runtime) {
+                        res.status(404).send("Agent not found");
+                        return;
+                    }
+
+                    await runtime.ensureConnection(
+                        userId,
+                        roomId,
+                        req.body.userName,
+                        req.body.name,
+                        "direct"
+                    );
+
+                    const text = `You are an AI agent specializing in blockchain analysis. Your task is to analyze a token based on the provided on-chain data and generate detailed insights, key findings, and future projections. Please present the response in a structured format.
+
+Here is the token data:
+- Token Name: ${tokenAnalyticData.tokenName}
+- Symbol: ${tokenAnalyticData.tokenSymbol}
+- Total Supply: ${tokenAnalyticData.totalSupply}
+- Verified: ${tokenAnalyticData.tokenIsVerified}
+- Holders: ${tokenAnalyticData.totalHolders}
+- Exchange Rate: $${tokenAnalyticData.tokenExchangeRate}
+- Top Holder Balances: ${tokenAnalyticData.topTokenHolderValues}
+- Total Transactions: ${tokenAnalyticData.totalTransactions}
+- Total Holders : ${tokenAnalyticData.totalHolders}
+
+Please provide the following:
+1. **Token Insights**: Key observations about holder distribution, transaction activity, and liquidity.
+2. **Projections**: Predict future trends in growth, market interest, and volatility.
+3. **Actionable Advice**: Recommendations for token holders or potential investors.
+
+Use a concise, professional tone and present your findings in an organized manner.`;
+                    const messageId = stringToUuid(Date.now().toString());
+
+                    const content: Content = {
+                        text,
+                        attachments: [],
+                        source: "direct",
+                        inReplyTo: undefined,
+                    };
+
+                    const userMessage = {
+                        content,
+                        userId,
+                        roomId,
+                        agentId: runtime.agentId,
+                    };
+
+                    const memory: Memory = {
+                        id: messageId,
+                        agentId: runtime.agentId,
+                        userId,
+                        roomId,
+                        content,
+                        createdAt: Date.now(),
+                    };
+
+                    await runtime.messageManager.createMemory(memory);
+
+                    const state = await runtime.composeState(userMessage, {
+                        agentName: runtime.character.name,
+                    });
+
+                    const context = composeContext({
+                        state,
+                        template: messageHandlerTemplate,
+                    });
+
+                    const response = await generateMessageResponse({
+                        runtime: runtime,
+                        context,
+                        modelClass: ModelClass.SMALL,
+                    });
+
+                    // save response to memory
+                    const responseMessage = {
+                        ...userMessage,
+                        userId: runtime.agentId,
+                        content: response,
+                    };
+
+                    await runtime.messageManager.createMemory(responseMessage);
+
+                    if (!response) {
+                        res.status(500).send(
+                            "No response from generateMessageResponse"
+                        );
+                        return;
+                    }
+
+                    let message = null as Content | null;
+
+                    await runtime.evaluate(memory, state);
+
+                    const _result = await runtime.processActions(
+                        memory,
+                        [responseMessage],
+                        state,
+                        async (newMessages) => {
+                            message = newMessages;
+                            return [memory];
+                        }
+                    );
+
+                    if (message) {
+                        res.json({ response, message, tokenAnalyticData });
+                    } else {
+                        res.json({ response, tokenAnalyticData });
+                    }
+                } catch (error) {
+                    console.error(error);
+                    res.status(500).json({
+                        error,
+                        details: error.message,
+                    });
+                }
+            }
+        );
         this.app.get("/ping", (req: express.Request, res: express.Response) => {
             res.json({
                 success: true,
