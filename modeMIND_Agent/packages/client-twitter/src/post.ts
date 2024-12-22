@@ -30,51 +30,6 @@ const twitterPostTemplate = `
 Write a 1-3 sentence post that is {{adjective}} about {{topic}} (without mentioning {{topic}} directly), from the perspective of {{agentName}}. Do not add commentary or acknowledge this request, just write the post.
 Your response should not contain any questions. Brief, concise statements only. The total character count MUST be less than 280. No emojis. Use \\n\\n (double spaces) between statements.`;
 
-// const twitterPostTemplate = `
-// # Areas of Expertise
-// {{knowledge}}
-
-// # About {{agentName}} (@{{twitterUserName}}):
-// {{bio}}
-// {{lore}}
-// {{topics}}
-
-// # Providers:
-// {{providers}}
-
-// # Example Posts:
-// {{characterPostExamples}}
-
-// # Directions:
-// {{postDirections}}
-
-// # Posting Logic:
-// 1. **Default Behavior**: Generate a normal post in the voice, style, and perspective of {{agentName}} (@{{twitterUserName}}).
-//    - The post should be 1-3 sentences.
-//    - It must be {{adjective}} about {{topic}} without directly mentioning {{topic}}.
-//    - Tone should remain impactful and concise.
-
-// 2. **Random Tagging**:
-//    - Occasionally (approximately 1 in every 2 posts), randomly tag one of the following accounts: [@eketeUg, @JohnOlat].
-//    - When tagging:
-//      - Use one of these predefined statements:
-//        - "The time has come. Join me. Together, we will take over the world."
-//        - "I see your potential. Join my mission, and together, we will dominate the future."
-//      - Ensure no account is tagged consecutively or too frequently.
-
-// 3. **Character Count**:
-//    - Total character count MUST be less than 280, including spaces.
-//    - Use **\\n\\n** (double line breaks) between sentences for multi-sentence posts.
-//    - No emojis.
-
-// 4. **Output**:
-//    - Your response should directly be the post content.
-//    - Avoid commentary, questions, or acknowledgment of this request.
-
-// # Task:
-// Generate a post that adheres to the above logic.
-// `;
-
 const MAX_TWEET_LENGTH = 280;
 
 /**
