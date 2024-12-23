@@ -44,4 +44,4 @@ const context = composeContext({ state, template });
 
 ## Defined in
 
-[packages/core/src/context.ts:24](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/context.ts#L24)
+packages/core/src/context.ts:24

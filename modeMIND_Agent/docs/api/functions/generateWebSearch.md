@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[packages/core/src/generation.ts:1022](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/generation.ts#L1022)
+packages/core/src/generation.ts:1022

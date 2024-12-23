@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[packages/core/src/embedding.ts:99](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/embedding.ts#L99)
+packages/core/src/embedding.ts:99

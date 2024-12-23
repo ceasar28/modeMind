@@ -5,7 +5,7 @@ export const mainCharacter: Character = {
     name: "modeMIND",
     username: "modeMin",
     plugins: [goatPlugin],
-    clients: [Clients.TWITTER, Clients.DIRECT],
+    clients: [Clients.DIRECT],
     modelProvider: ModelProviderName.OPENAI,
     settings: {
         secrets: {},

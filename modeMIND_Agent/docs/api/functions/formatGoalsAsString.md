@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[packages/core/src/goals.ts:30](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/goals.ts#L30)
+packages/core/src/goals.ts:30

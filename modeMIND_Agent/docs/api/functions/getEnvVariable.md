@@ -24,4 +24,4 @@ The environment variable value or default value
 
 ## Defined in
 
-[packages/core/src/settings.ts:103](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/settings.ts#L103)
+packages/core/src/settings.ts:103

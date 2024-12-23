@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[packages/core/src/messages.ts:94](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/messages.ts#L94)
+packages/core/src/messages.ts:94

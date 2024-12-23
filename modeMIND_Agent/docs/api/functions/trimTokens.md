@@ -28,4 +28,4 @@ The truncated text
 
 ## Defined in
 
-[packages/core/src/generation.ts:455](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/generation.ts#L455)
+packages/core/src/generation.ts:455

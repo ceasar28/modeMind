@@ -28,4 +28,4 @@ The completed message.
 
 ## Defined in
 
-[packages/core/src/generation.ts:759](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/generation.ts#L759)
+packages/core/src/generation.ts:759

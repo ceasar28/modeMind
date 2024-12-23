@@ -6,4 +6,4 @@
 
 ## Defined in
 
-[packages/core/src/parsing.ts:41](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/parsing.ts#L41)
+packages/core/src/parsing.ts:41

@@ -16,4 +16,4 @@ Validation function
 
 ## Defined in
 
-[packages/core/src/environment.ts:133](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/environment.ts#L133)
+packages/core/src/environment.ts:133

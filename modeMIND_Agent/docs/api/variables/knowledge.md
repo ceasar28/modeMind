@@ -52,4 +52,4 @@
 
 ## Defined in
 
-[packages/core/src/knowledge.ts:150](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/knowledge.ts#L150)
+packages/core/src/knowledge.ts:150

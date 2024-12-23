@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[packages/core/src/models.ts:385](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/models.ts#L385)
+packages/core/src/models.ts:385

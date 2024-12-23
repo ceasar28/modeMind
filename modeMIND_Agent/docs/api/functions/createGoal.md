@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[packages/core/src/goals.ts:55](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/goals.ts#L55)
+packages/core/src/goals.ts:55

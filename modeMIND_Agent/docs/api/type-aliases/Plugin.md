@@ -52,4 +52,4 @@ Optional clients
 
 ## Defined in
 
-[packages/core/src/types.ts:574](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L574)
+packages/core/src/types.ts:574

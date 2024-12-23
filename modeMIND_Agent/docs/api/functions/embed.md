@@ -28,4 +28,4 @@ If the API request fails
 
 ## Defined in
 
-[packages/core/src/embedding.ts:145](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/embedding.ts#L145)
+packages/core/src/embedding.ts:145

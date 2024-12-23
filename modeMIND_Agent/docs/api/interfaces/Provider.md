@@ -26,4 +26,4 @@ Data retrieval function
 
 #### Defined in
 
-[packages/core/src/types.ts:459](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L459)
+packages/core/src/types.ts:459

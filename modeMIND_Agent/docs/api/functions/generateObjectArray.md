@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[packages/core/src/generation.ts:711](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/generation.ts#L711)
+packages/core/src/generation.ts:711

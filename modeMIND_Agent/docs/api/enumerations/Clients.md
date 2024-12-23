@@ -12,7 +12,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:601](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L601)
+packages/core/src/types.ts:601
 
 ***
 
@@ -22,7 +22,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:602](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L602)
+packages/core/src/types.ts:602
 
 ***
 
@@ -32,7 +32,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:603](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L603)
+packages/core/src/types.ts:603
 
 ***
 
@@ -42,4 +42,4 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:604](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L604)
+packages/core/src/types.ts:604

@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[packages/core/src/goals.ts:8](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/goals.ts#L8)
+packages/core/src/goals.ts:8

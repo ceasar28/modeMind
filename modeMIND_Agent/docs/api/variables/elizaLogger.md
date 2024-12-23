@@ -6,4 +6,4 @@
 
 ## Defined in
 
-[packages/core/src/logger.ts:267](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/logger.ts#L267)
+packages/core/src/logger.ts:267

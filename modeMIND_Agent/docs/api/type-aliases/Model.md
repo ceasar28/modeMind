@@ -100,4 +100,4 @@ Model names by size class
 
 ## Defined in
 
-[packages/core/src/types.ts:142](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L142)
+packages/core/src/types.ts:142

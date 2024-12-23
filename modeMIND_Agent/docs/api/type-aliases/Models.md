@@ -86,4 +86,4 @@ Model configurations by provider
 
 ## Defined in
 
-[packages/core/src/types.ts:188](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/types.ts#L188)
+packages/core/src/types.ts:188

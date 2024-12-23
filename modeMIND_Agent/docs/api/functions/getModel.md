@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[packages/core/src/models.ts:381](https://github.com/ceasar28/modeMind/blob/main/modeMIND_Agent/packages/core/src/models.ts#L381)
+packages/core/src/models.ts:381
